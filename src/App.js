@@ -6,8 +6,9 @@ import Brandscreen from './screen/brandscreen';
 import Blogdashboard from "./screen/blogscreen"
 import Userdadhbord from './screen/useritaface';
 import Adminpanal from "./screen/adminpanal"
-import Preloader from './component/plerloard';
+import Preloader from './components/home-container/plerloard';
 import { useEffect, useState } from 'react';
+import ContactScreen from './screen/contactScreen';
 
 function App() {
   const [isLoding,setIsLoding]=useState(false)
@@ -29,6 +30,7 @@ function App() {
                  <Route path='/blogscreen' Component={Blogdashboard}></Route>
                  <Route path='/userdash' Component={Userdadhbord}></Route>
                  <Route path='/admin' Component={Adminpanal}></Route>
+                 <Route path='contact' Component={ContactScreen}></Route>
               </Routes>
           </>
         )}

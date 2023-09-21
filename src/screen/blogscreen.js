@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
-import StarLogo from "../component/logo";
 import "../sass/blogscren.css"
-import BlogImages from '../component/blogimage';
-import { FacebookOutlined,LinkedinOutlined,GithubOutlined,SearchOutlined} from '@ant-design/icons';
+import "../sass/style.css"
+import BlogImages from '../components/home-container/blogimage';
+import { FacebookOutlined,LinkedinOutlined,GithubOutlined} from '@ant-design/icons';
+import SearchForm from '../components/forms/search-form';
 
+import { Pagination } from 'antd';
+import DocumentFile from '../components/blog-container/document';
 
-const number=["<","1","2","3","4","5","6","7","8","9","10",">"]
 
 const Blogdashboard = () => {
   const [article,setArticle]=useState(false)
@@ -31,46 +33,40 @@ const Blogdashboard = () => {
      setGallery(true)
      setWelcom(false)
   }
+  const Goback = () =>{
+    window.location.href='/'
+  }
   return (
      <>
        <div className='bloghead'>
-          <div className='logop'>
-            <StarLogo className="blostar"/>
-            <h1>TWIZERIMANA~Gedeon</h1>
-          </div>
-          <div className='search'>
-             <div class="linksfixed">
-              <a href="https://www.facebook.com/tgjant.gedeon"><FacebookOutlined className="fix"/></a>
-               <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedinOutlined className="fix"/></a>
-              <a href="https://github.com/twizerim"><GithubOutlined className="fix"/></a>
-             </div>
-             <form className='blogform'>
-                <label className='bloglabel'>
-                   <input placeholder='Search' id='search'/>
-                   <SearchOutlined className='searchicon'/>
-                </label>
-             </form>
-          </div>
+         <div className='bg-blue-900 flex justify-start items-center h-[15vh] w-full px-[50px]'>
+             <hi className='text-5xl'>My Blogs</hi>
+         </div>
        </div>
        <div className='blognav'>
-         <li onClick={handlearticle} className={article===true? "blonave-li":""}>Articles</li>
+          <div className='flex justify-center items-center gap-10'>
+          <li className={document===true? "blonave-li":""} onClick={Goback}>Home</li>
+          <li onClick={handlearticle} className={article===true? "blonave-li":""}>Articles</li>
          <li onClick={handledocument} className={document===true? "blonave-li":""}>Documents</li>
-         <li><a href='/'>Home</a></li>
          <li onClick={handlegallery} className={gallery===true? "blonave-li":""}>Gallery</li>
+          </div>
+          <div className=' pt-4'>
+             <SearchForm/>
+          </div>
        </div>
 
        <div className='space'>
         {welcom && (
            <div className='welcomnumber'>
-           {number.map((num,index)=>(
-              <div className='firstnumber' key={index}>
-                <p className='num'>{num}</p>
-              </div>
-           ))}
+           <Pagination/>
           </div>
         )}
           {article && ( <h1>articles</h1>)}
-         {document && (<h1>documents</h1>)}
+         {document && (
+            <div className='gallery'>
+               <DocumentFile/>
+            </div>
+         )}
           {gallery && (
             <div className='gallery'>
                <BlogImages/>

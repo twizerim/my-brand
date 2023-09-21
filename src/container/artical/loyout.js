@@ -25,11 +25,16 @@ export default function Loyout(){
     }   
     return(
         <>
-        <div className="div-header">
-            <button onClick={Handleimage}>Images</button>
-            <button onClick={Handlevideo}>Videos</button>
-            <button onClick={Handledocume}>Certificante</button>
+        
+        <div className="bg-blue-900">
+            <ul className="flex justify-start items-center gap-10 py-10 px-5">
+            <li onClick={Handleimage} className="text-5xl" style={{listStyle:"none"}}>Images</li>
+            <li onClick={Handlevideo} className="text-5xl" style={{listStyle:"none"}}>Videos</li>
+            <li onClick={Handledocume} className="text-5xl" style={{listStyle:"none"}}>Certificante</li>
+            </ul>
+           
         </div>
+        <div className="bg-white">
         {postimage && (
             <Postimage/>
         )}
@@ -39,6 +44,8 @@ export default function Loyout(){
         {postidocuma && (
             <Posticertif/>
         )}
+        </div>
+        
         </>
     )
 }

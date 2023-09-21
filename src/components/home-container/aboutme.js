@@ -1,7 +1,7 @@
 
 import React from "react";
-import "../sass/style.css"
-import jant from "../assets/jant.jpeg"
+import "../../sass/style.css"
+import jant from "../../assets/jant.jpeg"
 
 
 export default function Aboutme(){

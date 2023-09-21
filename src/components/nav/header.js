@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
-import "../sass/style.css"
-import StarLogo from "./logo";
+import "../../sass/style.css"
+import StarLogo from "../home-container/logo";
 import { MenuOutlined } from '@ant-design/icons';
 import { CloseOutlined } from '@ant-design/icons';
 
@@ -27,7 +27,7 @@ export default function Navigation(){
              <div className="combine-log">
                  <div class="logo">
                   < StarLogo className='head-logo'/>
-                   <h3>UI/XI</h3>
+                   <h3><a href="/">Gedeon</a></h3>
                 </div>
                 {close && (<CloseOutlined className="menu" onClick={Hidenavigate}/>)}
             </div>
@@ -35,7 +35,7 @@ export default function Navigation(){
             <ul className={menu=== true ? 'navlinks':'links'}>
                 <li><a href="./#about" class="nav-links">About Me</a></li>
                 <li><a href="./blogscreen" class="nav-links">Blogs</a></li>
-                <li><a href="./#contact" class="nav-links">Contact Me</a></li>
+                <li><a href="./contact" class="nav-links">Contact Me</a></li>
                 <li><a href="login" class="nav-links btn btn-green">Login</a></li>
             </ul>
             {hidicon && (

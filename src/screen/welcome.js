@@ -1,8 +1,9 @@
 
 import '../App.css';
-import Loginform from '../component/login';
+import Login from '../components/home-container/login';
 import React,{useState} from 'react';
-import Signupform from "../component/signup"
+import Signup from '../components/home-container/signup';
+import Navigation from '../components/nav/header';
 
 
 function Welcomescreen() {
@@ -19,11 +20,12 @@ function Welcomescreen() {
  }
   return (
     <div className="App">
+      <Navigation/>
       <header className="App-header">
         
         <div className='formdisign'>
-          {login && (<Loginform pass={handlesignup}/>)}
-           {signup && (<Signupform pass={handlelogin}/>)}
+          {login && (<Login pass={handlesignup}/>)}
+           {signup && (<Signup pass={handlelogin}/>)}
         </div>
       </header>
     </div>

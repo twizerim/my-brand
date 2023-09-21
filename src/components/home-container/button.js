@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../sass/login.css"
+import "../../sass/login.css"
 
 
 export default function Buttoncomponent(props){

@@ -37,30 +37,14 @@ export default function Adminpanal(){
     }
     return (
         <>
-          <nav>
-          <div className="subNav">
-          <div className="respone">
-                {show && (< MenuOutlined onClick={HandelNav} className="menu-icon"/>)}
-                {hide && (<CloseOutlined onClick={HandelCloseNav} className="menu-icon"/>)}
-            </div>
-            <div class="logo-title">
-            <h1>Jant~Gedeon</h1>
-            </div>
-          </div>
-        
-        <div class="nav-links">
-            <div class="nav-link">
-                <ul>
-                    <li><a href="#my-courses">Works</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Industries</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
     <div class="dash-container">
         {nav && (
             <div class="dash-left">
+                <div className="respone">
+                {show && (< MenuOutlined onClick={HandelNav} className="menu-icon"/>)}
+                {hide && (<CloseOutlined onClick={HandelCloseNav} className="menu-icon"/>)}
+            </div>
             <div class="dsh-icon">
                 <div class="dsh">
                 <i><WindowsOutlined className="admin"/><p>Dashboard</p></i>

@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../sass/style.css"
+import "../../sass/style.css"
 
 
 export default function Skills(){
