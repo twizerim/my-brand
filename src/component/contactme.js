@@ -3,8 +3,8 @@ import "../sass/style.css"
 
 export default function Contactme() {
   return (
-    <div className="contact-container" id="contact">
-      <h1 className="heading-title">Contact-Us</h1>
+    <div className="conta-contain" id="contact">
+      <div className="warning"><h1 className="heading-title">Contact-Us</h1></div>
       <div className="contact">
         <div className="contact-left">
           <h3>Get in Touch</h3>
