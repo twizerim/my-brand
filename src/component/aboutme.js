@@ -9,9 +9,11 @@ export default function Aboutme(){
         <div class="about-container" id="about">
         <h1 class="heading-title">About me</h1>
       <div class="about">
-          <div class="about-text">
-        <p>Hi my name is Twizerimana Gedeon I'am a full-stack software Developer.I can make a UI/UX Design, Front-End and Back-End</p>
-        <p>we follow us</p> 
+        <div class="about-text">
+        <p>Hi my name is Twizerimana Gedeon and I like making things for the internet. My interest in web development began when I enrolled
+           in college in 2223, and from  there I began my journey to improve my coding abilities. 
+        </p>
+        <p>Here are some current tochnologies I've worked with</p> 
         <div class="button-container text-left">
         <a href="" class="btn btn-none" download="">Download my cv</a>
       </div>

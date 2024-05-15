@@ -1,0 +1,34 @@
+
+.image-contain{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+    border: 2px solid blueviolet;
+    
+}
+.image-contain img{
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+      object-fit: cover;
+      
+ }
+  .image-contain img :hover{
+    transform: scale(1.5, 1.5);
+    position: absolute;
+    z-index: 999;
+  }
+  .my-image{
+     position: absolute;
+     top: 80%;
+     left: 20%;
+      width: 130px;
+      display: flex;
+     
+     display: none;
+  }
+  .image-contain:hover .my-image {
+    display: block;
+    
+}
