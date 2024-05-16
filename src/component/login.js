@@ -10,7 +10,6 @@ import email from "../assets/image.png"
 export default function Loginform(){
     return (
         <form>
-            <h1>Login</h1>
             <div className="division">
                 <label>Useremail
                     <input type="" placeholder="Type your useremail"/>

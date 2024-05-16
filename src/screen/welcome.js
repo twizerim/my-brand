@@ -8,6 +8,10 @@ function Welcomescreen() {
       <header className="App-header">
         
         <div className='formdisign'>
+          <div className='loginheading'>
+              <h2>Login</h2>
+              <h2>Sign up</h2>
+          </div>
            <Loginform/>
         </div>
         
