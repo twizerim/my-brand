@@ -36,7 +36,7 @@ nav {
   font-size: 2.8rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, black, blue,white);
+  background-image: linear-gradient(to right, black, aqua,white);
   color: transparent;
   -webkit-background-clip: text;
   transition: all 0.3s;
@@ -52,7 +52,7 @@ nav {
 }
 .nav-links:link,
 .nav-links:visited {
-  color: rgb(18, 1, 167);
+  color: aqua;
   transition: all 03s;
   font-weight: 500;
   font-size: 1.8rem;
@@ -60,8 +60,8 @@ nav {
 }
 .nav-links:hover,
 .nav-links:active {
-  border-bottom: 2px solid black;
-  color: blue;
+  border-bottom: 2px solid #fff;
+  color: #fff;
   
 }
 .btn-green {
@@ -162,7 +162,7 @@ nav {
 }
 .btn-none:link,
 .btn-none:visited {
-  color: blue;
+  color: aqua;
   background-color: white;
   font-size: 2rem;
   border-radius: 0.8rem;
@@ -202,7 +202,7 @@ nav {
   display: inline-block;
   color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to right ,blue,gray,white);
+  background-image: linear-gradient(to right ,aqua,gray,white);
   position: relative;
 
 }
@@ -215,7 +215,7 @@ nav {
   left: 0%;
   height: 5px;
   width: 25%;
-  background-image: linear-gradient(to right, blue,gray,white);
+  background-image: linear-gradient(to right,aqua,gray,white);
   position: absolute;
   font-size: 1.2rem;
 }
@@ -225,7 +225,7 @@ nav {
   left: 0%;
   height: 5px;
   width: 80%;
-  background-image: linear-gradient(to right,blue,gray,white);
+  background-image: linear-gradient(to right,gray,white,aqua);
   position: absolute;
   font-size: 1.2rem;
 }

@@ -9,6 +9,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.formdisign{
+  background-color: rgb(213, 208, 208);
+  width: 30%;
+  padding: 2rem 3rem;
+  border-radius: 1.4rem;
+}
 
 .App-header {
   background-color: #282c34;
@@ -19,6 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap: 3rem;
 }
 
 .App-link {
