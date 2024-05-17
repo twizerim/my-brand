@@ -23,7 +23,7 @@ export default function Homescreen(){
                 <h5><span class="salutation">Hi my name is </span><span class="name">Twizerimana gedeon</span></h5>
                 <p>I'am a full-stack software Developer.I can make a UI/UX Design, Front-End and Back-End</p>
                 <div class="button-container">
-                    <a href="" class="btn btn-none">Let's work together!</a>
+                    <a href="" class="btn btn-none ">Let's work together!</a>
                 </div>
             </div>
         </div>
