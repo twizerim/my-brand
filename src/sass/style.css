@@ -24,7 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 10rem;
   width: 100%;
   z-index: 9999;
   top: 0;
@@ -67,18 +67,19 @@ nav {
 }
 .btn-green {
   background-color: white;
-  color: blue;
+  color: #747af4;
 }
 .btn:link,
 .btn:visited {
   padding: 1rem 3rem;
   border-radius: 0.8rem;
   transition: all 0.3rem;
+  color: #747af4;
 }
 .btn:hover,
 .btn:active {
   background-color: rgb(83, 80, 87);
-  color: black;
+  color: #747af4;
   border-bottom: none;
 }
 .home-container {
@@ -145,6 +146,9 @@ nav {
   text-align: center;
   margin-bottom: 1.2rem;
 }
+h5{
+  color: aqua;
+}
 .welcome-text p {
   font-size: 1.6rem;
   color: #ccc;
@@ -163,7 +167,7 @@ nav {
 }
 .btn-none:link,
 .btn-none:visited {
-  color: aqua;
+  color: #747af4;
   background-color: white;
   font-size: 2rem;
   border-radius: 0.8rem;
@@ -554,7 +558,8 @@ h4{
 }
 .conta-contain{
   background-color: #333232;
-  padding-top: 6rem; 
+  padding-top: 6rem;
+  padding-bottom: 4rem; 
 }
 .contact {
   margin-top: 8rem;
@@ -647,8 +652,11 @@ textarea {
 }
 .footer-container {
   background-color: #222;
-  padding: 2rem;
-  text-align: center;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
 }
 .footer-container p {
   font-size: 1.6rem;
@@ -675,7 +683,27 @@ textarea {
   color: rgb(77, 77, 196);
   transform: translate(3px, -5px);
 }
-
+.links-media-fixed a ,.links-media-footer a {
+   background-color:#fff;
+   padding: 1rem;
+   border: 2px solid aqua;
+   border-radius: 50%;
+   
+}
+.links-media-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.links-media-footer a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+}
 .links-media-fixed::after,
 .email-link-fixed::after {
   content: "";
@@ -702,6 +730,8 @@ textarea {
   -webkit-writing-mode: vertical-rl;
 
   font-size: 1.6rem;
+  color: aqua;
+  font-weight: bold;
 }
 .menu-icon {
   display: none;
@@ -783,4 +813,8 @@ textarea {
   border-radius: 4px;
   background-color:white;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.171);
+}
+.footer{
+  color: aqua;
+  font-weight: bold;
 }

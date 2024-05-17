@@ -38,7 +38,7 @@ h1{
 p{
     color: #000;
     font-size: 1.5rem;
-    text-align: right;  
+    /* text-align: right;   */
 }
 label{
     font-size: 1.4rem;
@@ -81,16 +81,4 @@ span{
     height: 40px;
     border-radius: 50%;
     
-}
-.loginheading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h2{
-    color: aqua;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 2rem 3rem;
-    border-bottom:1px solid #5151514d;
 }

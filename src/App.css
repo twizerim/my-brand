@@ -40,3 +40,22 @@
     transform: rotate(360deg);
   }
 }
+.loginheading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  color: aqua;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 3rem;
+  border-bottom:1px solid #5151514d;
+}
+.activeform{
+  color: #747af4;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 3rem;
+  border-bottom:2px solid #747af4;
+}

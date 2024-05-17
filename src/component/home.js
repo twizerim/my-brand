@@ -2,6 +2,9 @@
 import React from "react";
 import "../sass/style.css"
 import gedeon from "../assets/gedeon.jpeg"
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 export default function Homescreen(){
@@ -9,10 +12,11 @@ export default function Homescreen(){
         <div class="home-container" id="home">
         <div class="home">
           <div class="links-media-fixed">
-            <i class="fa-brands fa-github git"></i>
-            <i class="fa-brands fa-instagram git"></i>
-            <i class="fa-brands fa-twitter git" ></i>
-            <i class="fa-brands fa-linkedin-in git"></i>
+            <a href="https://www.facebook.com/tgjant.gedeon"><FacebookIcon/></a>
+            <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
+            <a href="https://github.com/twizerim"><GitHubIcon/></a>
+            <a href="www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
+            
           </div>
             <div class="positoining">
             <div class="welcome-text">
