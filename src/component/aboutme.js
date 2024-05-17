@@ -9,7 +9,7 @@ export default function Aboutme(){
         <div class="about-container" id="about">
         <h1 class="heading-title">About me</h1>
       <div class="about">
-          <div class="about-text">
+        <div class="about-text">
         <p>Hi my name is Twizerimana Gedeon I'am a full-stack software Developer.I can make a UI/UX Design, Front-End and Back-End</p>
         <p>we follow us</p> 
         <div class="button-container text-left">

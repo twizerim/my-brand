@@ -32,6 +32,11 @@ nav {
   position: fixed;
   box-shadow: 4px 4px 4px rgba(248, 248, 250, 0.116);
 }
+@media(max-width:931px){
+  nav {
+    padding: 2rem; 
+  }
+}
 .logo {
   font-size: 2.8rem;
   letter-spacing: 0.3rem;
@@ -50,6 +55,11 @@ nav {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+@media(max-width:774px){
+  .nav-links {
+    display: none;
+  }
 }
 .nav-links:link,
 .nav-links:visited {
@@ -101,6 +111,23 @@ nav {
   justify-content: space-between !important;
   align-items: center;
 }
+@media(max-width:891px){
+  .home {
+    display: flex;
+    justify-content: center !important;
+  align-items: center;
+  gap: 4rem;
+  }
+}
+@media(max-width:748px){
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center !important;
+  align-items: center;
+  gap: 4rem;
+  }
+}
 .welcome-text {
   background-color: #2222229d;
   padding: 3rem;
@@ -112,18 +139,38 @@ nav {
   top: 60%;
   transform: translate(0, -50%);
 }
+@media(max-width:748px){
+  .welcome-text {
+    top: 80%;
+    width: 60%;
+    left: 10%;
+  }
+}
+@media(max-width:495px){
+  .welcome-text {
+    top: 80%;
+    width: 80%;
+    
+  }
+}
 .welcome-text h5 {
   color: rgba(166, 166, 224, 0.911);
   font-weight: 400;
   font-size: 1.8rem;
 }
 .image-container {
-  display: flex;
+  /* display: flex; */
   height: 60%;
   width: 40%;
   margin-top: 4rem;
   border-radius: 50%;
-  z-index: 99999;
+  
+}
+@media(max-width:891px){
+  .image-container {
+    height: 40%;
+    width: 20%;
+  }
 }
 .image-container img {
   height: 100%;
@@ -253,6 +300,35 @@ h5{
   align-items: center;
   justify-content: space-around;
 }
+@media(max-width:711px){
+  .about{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column-reverse;
+     gap: 2rem;
+     padding-top: 3rem;
+
+  }
+}
+
+@media(max-width:590px){
+  .about{
+    width: 100%;
+  }
+}
+
+
+@media(max-width:934px){
+  .about-text{
+     width: 50%;
+  }
+}
+@media(max-width:711px){
+  .about-text{
+    width: 100%;
+  }
+}
 .about-text p{
   font-size: 1.8rem;
   margin-bottom: 3rem;
@@ -309,6 +385,7 @@ h5{
 }
 .card-container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 3rem;
   margin-top: 8rem;
@@ -478,8 +555,9 @@ h4{
 }
 .images-container{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 8rem;
-  justify-content: space-between;
+  justify-content: center;
   gap: 3rem;
 }
 .skills-card{
