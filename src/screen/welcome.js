@@ -28,15 +28,6 @@ function Welcomescreen() {
           {login && (<Loginform/>)}
            {signup && (<Signupform/>)}
         </div>
-        
-        <a
-          className="App-link"
-          href="/brand"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

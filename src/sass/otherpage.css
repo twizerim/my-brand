@@ -1,0 +1,23 @@
+
+.skillpage{
+    /* background-color: #2222229d; */
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    
+    padding: 3rem;
+    color: blue;
+}
+h4{
+    background-color: red;
+    font-size: 3rem;
+    
+}
+.row{
+    padding: 3rem;
+}

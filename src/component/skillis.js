@@ -12,19 +12,19 @@ export default function Skills(){
             <i class="fa-solid fa-code"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.ea doloremque cumque repudiandae distinctio facilis.</p>
-              <a href="" class="link-portfolio">Learn more...</a>
+              <a href="/skills" class="link-portfolio">Learn more...</a>
           </div>
           <div class="card card-two">
             <i class="fa-solid fa-crop-simple" ></i>
             <h3>UI/UX Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.ea doloremque cumque repudiandae distinctio facilis..</p>
-            <a href="" class="link-portfolio"><p>Learn more...</p></a>
+            <a href="/skills" class="link-portfolio"><p>Learn more...</p></a>
           </div>
           <div class="card card-three">
             <i class="fa-brands fa-app-store" ></i>
             <h3>App Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.ea doloremque cumque repudiandae distinctio facilis. </p>
-            <a href="" class="link-portfolio">Learn more...</a>
+            <a href="/skills" class="link-portfolio">Learn more...</a>
           </div>
         </div>
       </div>
