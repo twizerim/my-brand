@@ -404,6 +404,9 @@ h5{
   align-items: center;
   justify-content: space-around;
 }
+.about-text{
+  width: 70%;
+}
 @media(max-width:763px){
   .about{
      display: flex;
@@ -954,12 +957,8 @@ textarea {
   color: rgb(77, 77, 196);
   transform: translate(3px, -5px);
 }
-.links-media-fixed a ,.links-media-footer a {
-   background-color:#fff;
-   padding: 1rem;
-   border: 2px solid aqua;
-   border-radius: 50%;
-   
+.fixs{
+  color: #fff;
 }
 .links-media-footer{
   display: flex;

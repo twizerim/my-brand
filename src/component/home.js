@@ -12,10 +12,10 @@ export default function Homescreen(){
         <div class="home-container" id="home">
         <div class="home">
           <div class="links-media-fixed">
-            <a href="https://www.facebook.com/tgjant.gedeon"><FacebookIcon/></a>
-            <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
-            <a href="https://github.com/twizerim"><GitHubIcon/></a>
-            <a href="www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
+            <a href="https://www.facebook.com/tgjant.gedeon"><FacebookIcon className="fixs"/></a>
+            <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon className="fixs"/></a>
+            <a href="https://github.com/twizerim"><GitHubIcon className="fixs"/></a>
+            <a href="www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon className="fixs"/></a>
             
           </div>
             <div class="positoining">
