@@ -6,9 +6,10 @@ import facebook from "../assets/fb.png"
 import twiter from "../assets/twita.png"
 import email from "../assets/image.png"
 import axios from "axios";
+import SearchIcon from '@mui/icons-material/Search';
 
 
-export default function Loginform(){
+export default function Loginform(props){
     const [formData , setFormData] = useState({email:"",password:""})
 
     const HandleInputlogin = (e) =>{
@@ -30,15 +31,12 @@ export default function Loginform(){
             localStorage.setItem("token",response.data.token)
             localStorage.setItem("role",response.data.data.user.role)
             alert("Login successfuly ok go to next")
-            window.location.href="/brand"
 
-            // if(response.data.data.user.role==="admin"){
-            //     window.location.href="/adminpanel"
-            //  }else if(response.data.data.user.role==="farmer"){
-            //     window.location.href="/farmerpanel"
-            //  }else{
-            //    window.location.href="/product"
-            //  }
+            if(response.data.data.user.role==="admin"){
+                window.location.href="/admin"
+            }else{
+               window.location.href="/userdash"
+            }
         } catch (error) {
              console.log(error)
         }
@@ -48,7 +46,8 @@ export default function Loginform(){
         <form onSubmit={HandleLogin}>
             <div className="division">
                 <label htmlFor="email">Useremail
-                    <input type="email" name="email" onChange={HandleInputlogin} value={formData.email} placeholder="Type your useremail"/>
+                    <input type="email" name="email" onChange={HandleInputlogin} value={formData.email}
+                     placeholder="Type your useremail"/>
                 </label>
             </div>
             <div className="division">
@@ -70,7 +69,7 @@ export default function Loginform(){
             </div>
             <div className="signbottom">
                <p>Or sign up using</p>
-               <span>SIGN UP</span>
+               <span onClick={props.pass}>SIGN UP</span>
             </div>
         </form>
     )

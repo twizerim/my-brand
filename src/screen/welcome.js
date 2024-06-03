@@ -4,6 +4,7 @@ import Loginform from '../component/login';
 import React,{useState} from 'react';
 import Signupform from "../component/signup"
 
+
 function Welcomescreen() {
   const [login ,setLogin]=useState(true)
   const [signup , setSignup]=useState(false)
@@ -25,7 +26,7 @@ function Welcomescreen() {
               <h2 className={login===true ? "activeform" :"" } onClick={handlelogin}>Login</h2>
               <h2 className={signup===true ? "activeform" :"" } onClick={handlesignup}>Sign up</h2>
           </div>
-          {login && (<Loginform/>)}
+          {login && (<Loginform pass={handlesignup}/>)}
            {signup && (<Signupform/>)}
         </div>
       </header>

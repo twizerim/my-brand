@@ -32,13 +32,30 @@ nav {
   position: fixed;
   box-shadow: 4px 4px 4px rgba(248, 248, 250, 0.116);
 }
-@media(max-width:931px){
+.subNav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.navrespone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  position: absolute;
+  width: 80%;
+  height: auto;
+}
+@media(max-width:1115px){
   nav {
     padding: 2rem; 
   }
 }
 .logo {
   font-size: 2.8rem;
+  display: flex;
+  
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   background-image: linear-gradient(to right, black, aqua,white);
@@ -50,15 +67,46 @@ nav {
 .logo:hover {
   transform: translate(3px, -3px);
 }
-.nav-links {
-  list-style-type: none;
+.logo .head-logo{
+     width: 50px;
+     height: 50px;
+}
+.link{
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-@media(max-width:774px){
-  .nav-links {
+.links{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+.navlinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+.menu{
+   color: #fff;
+   font-size: 4rem;
+}
+.respo{
+  display: none;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media(max-width:916px){
+  .links {
     display: none;
+  }
+  .respo{
+    display: block;
   }
 }
 .nav-links:link,
@@ -745,14 +793,14 @@ h4{
   padding-top: 6rem;
   padding-bottom: 4rem; 
 }
-.contact {
+.contacts {
   margin-top: 8rem;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 @media(max-width:922px){
-  .contact {
+  .contacts {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -830,6 +878,7 @@ h4{
 }
 .media-icons span {
   display: block;
+  color: rgb(7, 157, 157);
 }
 
 .social-media-icons-links {

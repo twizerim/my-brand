@@ -37,13 +37,13 @@ export default function Contactme() {
   return (
     <div className="conta-contain" id="contact">
       <div className="warning"><h1 className="heading-title">Contact-Us</h1></div>
-      <div className="contact">
+      <div className="contacts">
         <div className="contact-left">
           <h3>Get in Touch</h3>
           <p className="text-welcome">We'd love to hear from you. Our friendly team <span>is always here to chat</span></p>
           <div className="social-media">
             <div className="media-icons">
-              <ForwardToInboxIcon/>
+              <ForwardToInboxIcon className="menu"/>
               <div className="media-chat">
                 <h3>Chat to us</h3>
                 <p>Chat to us
@@ -51,27 +51,27 @@ export default function Contactme() {
               </div>
             </div>
             <div className="media-icons">
-              <HomeIcon/>
+              <HomeIcon className="menu"/>
               <div className="media-chat">
                 <h3>Chat to us</h3>
                 <p>Chat to us
-                  Our friendly team is here to help you <span>gedeontwizeyimana@gmail.com</span></p>
+                  Our friendly team is here to help you <span>twizerimanagedeon6@gmail.com</span></p>
               </div>
             </div>
             <div className="media-icons">
-              <PhoneInTalkIcon/>
+              <PhoneInTalkIcon className="menu"/>
               <div className="media-chat">
                 <h3>Chat to us</h3>
                 <p>Chat to us
-                  Our friendly team is here to help you <span>gedeontwizeyimana@gmail.com</span></p>
+                  Our friendly team is here to help you <span>twizerimanagedeon273@gmail.com</span></p>
               </div>
             </div>
           </div>
           <div className="social-media-icons-links">
-          <a href="https://www.facebook.com/tgjant.gedeon"><FacebookIcon/></a>
-            <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
-            <a href="https://github.com/twizerim"><GitHubIcon/></a>
-            <a href="www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon/></a>
+          <a href="https://www.facebook.com/tgjant.gedeon"><FacebookIcon className="menu"/></a>
+            <a href="https://www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon className="menu"/></a>
+            <a href="https://github.com/twizerim"><GitHubIcon className="menu"/></a>
+            <a href="www.linkedin.com/in/twizerimana-gedeon-086791296"><LinkedInIcon className="menu"/></a>
           </div>
         </div>
         <div className="contact-right">

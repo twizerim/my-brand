@@ -24,7 +24,7 @@ button:active {
 
 /* -------------------------------------------------------------------------------------------------------------- */
 form{
-    /* background-color: blue; */
+    
     padding: 1.5rem;
 }
 .division{
@@ -38,7 +38,6 @@ h1{
 p{
     color: #000;
     font-size: 1.5rem;
-    /* text-align: right;   */
 }
 label{
     font-size: 1.4rem;

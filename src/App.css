@@ -15,6 +15,31 @@
   padding: 2rem 3rem;
   border-radius: 1.4rem;
 }
+@media(max-width:1096px){
+  .formdisign{
+    width: 40%;
+  }
+}
+@media(max-width:828px){
+  .formdisign{
+    width: 50%;
+  }
+}
+@media(max-width:657px){
+  .formdisign{
+    width: 60%;
+  }
+}
+@media(max-width:549px){
+  .formdisign{
+    width: 80%;
+  }
+}
+@media(max-width:414px){
+  .formdisign{
+    width: 90%;
+  }
+}
 
 .App-header {
   background-color: #282c34;
