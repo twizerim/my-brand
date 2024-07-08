@@ -77,7 +77,7 @@ export default function Portifolio(){
             </div>
             <div className="polt-content">
                <h5>Featured</h5>
-                <h6>Wekraft Project</h6>
+                <h6>Healthcare Project</h6>
                 <p>A web app for visualizing personalized Spotify data. View your top artists, top 
                     tracks, recently played tracks, and detailed audio information about each track.</p>
                   <div className="link-project">
