@@ -28,15 +28,31 @@ button:active {
     display: flex;
     justify-content: space-between;
 }
+@media(max-width:417px){
+    .log-continer{
+        display: flex;
+        flex-direction: column;
+    }
+}
 .loginform{
     width: 55%;
     background-color: #747af4;
     border-radius: 1.4rem;
 }
+@media(max-width:417px){
+    .loginform{
+        width: 100%;
+    }
+}
 .other-method{
     width: 45%;
     padding: 20px; 
      
+}
+@media(max-width:417px){
+    .other-method{
+        width: 100%;
+    }
 }
 form{
     
@@ -110,8 +126,8 @@ span{
 }
 .pick{
     border: 1px solid rgb(46, 53, 65);
-    width: 40%;
-    text-align: center;
+    width: 100%;
+    text-align:center;
     border-radius: 5px;
     padding: 0.7px 5px;
 }
