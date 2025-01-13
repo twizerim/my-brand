@@ -33,10 +33,7 @@ export default function Navigation(){
             </div>
         <div class="link">
             <ul className={menu=== true ? 'navlinks':'links'}>
-                <li><a href="./#home" class="nav-links">Home</a></li>
                 <li><a href="./#about" class="nav-links">About Me</a></li>
-                <li><a href="./#portfolio" class="nav-links">Portfolio</a></li>
-                <li><a href="./#skills" class="nav-links">Skills</a></li>
                 <li><a href="./blogscreen" class="nav-links">Blogs</a></li>
                 <li><a href="./#contact" class="nav-links">Contact Me</a></li>
                 <li><a href="login" class="nav-links btn btn-green">Login</a></li>

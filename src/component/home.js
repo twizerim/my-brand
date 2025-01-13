@@ -1,7 +1,7 @@
 
 import React from "react";
 import "../sass/style.css"
-import gedeon from "../assets/gedeon.jpeg"
+// import gedeon from "../assets/gedeon.jpeg"
 import { GithubOutlined, FacebookOutlined,LinkedinOutlined } from '@ant-design/icons';
 
 
@@ -25,7 +25,7 @@ export default function Homescreen(){
             </div>
         </div>
             <div class="image-container">
-            <img src={gedeon} alt="Logo" />
+            {/* <img src={gedeon} alt="Logo" /> */}
             </div>
             <div class="email-link-fixed">
               <p>gedeontwizeyimana@gmail.com</p>

@@ -101,12 +101,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 2rem;
+  
 }
 .links{
   display: flex;
   align-items: center;
   gap: 2rem;
-  list-style-type: none;
+  list-style-type: none
+
 }
 .navlinks{
   display: flex;
@@ -129,9 +131,8 @@ nav {
   display: none;
 }
 .nav-links {
-  display: flex;
-  align-items: center;
   gap: 2rem;
+  width: 100px;
 }
 @media(max-width:916px){
   .links {
