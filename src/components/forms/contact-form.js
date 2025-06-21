@@ -12,10 +12,8 @@ export default function ConctactForm(){
    })
  }
 
- const Handlecontact = async (e) =>{
-     e.preventDefault();
-
-     const API="https://type-bn-poltifolio.onrender.com/Jant/message"
+ const Handlecontact = async () =>{
+     const API="https://my-brand-b.onrender.com/api/v1/contact"
 
      try {
        const response = await axios.post(API,formData,{
@@ -23,7 +21,8 @@ export default function ConctactForm(){
            'Content-Type': 'application/json'
           }
        })
-       alert(response.data.message)
+       alert("message sent")
+       console.log(response)
      } catch (error) {
         console.log(error)
      }

@@ -8,6 +8,8 @@ import Adminpanal from "./screen/admin/adminpanal"
 import Preloader from './plerloard';
 import { useEffect, useState } from 'react';
 import ContactScreen from './screen/client/contactScreen';
+import { Provider } from 'react-redux';
+import { store } from './components/redux/stores/store';
 
 function App() {
   const [isLoding,setIsLoding]=useState(false)
@@ -18,7 +20,8 @@ function App() {
     },2000)
   },[])
   return (
-       <Router>
+       <Provider store={store}>
+          <Router>
         {isLoding ?(
           <Preloader/>
         ):(
@@ -33,6 +36,8 @@ function App() {
           </>
         )}
        </Router>
+       </Provider>
+       
   );
 }
 

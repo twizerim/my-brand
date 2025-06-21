@@ -1,130 +1,82 @@
-// import React, { useState} from "react";
+import one from "../../../assets/guy.jpeg";
+import two from "../../../assets/jant.jpeg";
+import three from "../../../assets/image.png";
+import four from "../../../assets/history.jpeg";
+import five from "../../../assets/home.jpeg";
+import { Modal } from "antd";
+import { useState } from "react";
 
-// import Preloader from "./plerloard";
-// import axios from "axios";
-import { LikeOutlined,DislikeOutlined,CloudDownloadOutlined } from '@ant-design/icons';
-import one from "../../../assets/guy.jpeg"
-import two from "../../../assets/jant.jpeg"
-import three from "../../../assets/image.png"
-import four from "../../../assets/history.jpeg"
-import five from "../../../assets/home.jpeg"
+const Images = () => {
+  const imageArray = [
+    { id: 1, image: one },
+    { id: 2, image: two },
+    { id: 3, image: three },
+    { id: 4, image: four },
+    { id: 5, image: five },
+  ];
 
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const downloadImage = (url) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = url.substring(url.lastIndexOf("/") + 1);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-export default function Images() {
-    // const [imageData, setImageData] = useState([]);
-    // const [isLoading, setIsLoading] = useState(true);
+  const handleImageClick = (imgUrl) => {
+    setSelectedImage(imgUrl);
+    setIsOpenModal(true);
+  };
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await axios.get("https://type-bn-poltifolio.onrender.com/Jant/imageuploaded/get");
-    //             setImageData(response.data);
-    //             setIsLoading(false);
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
+  const handleDownloadConfirm = () => {
+    if (selectedImage) {
+      downloadImage(selectedImage);
+    }
+    setIsOpenModal(false);
+    setSelectedImage(null);
+  };
 
-   
+  return (
+    <>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+        {imageArray.map((img) => (
+          <div
+            key={img.id}
+            className="overflow-hidden rounded-xl shadow-md cursor-pointer"
+            onClick={() => handleImageClick(img.image)}
+          >
+            <img
+              src={img.image}
+              alt={`Gallery ${img.id}`}
+              className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300 rounded-lg"
+            />
+          </div>
+        ))}
+      </div>
 
-    // console.log(imageData);
+      <Modal
+        title="Confirm Download"
+        open={isOpenModal}
+        onOk={handleDownloadConfirm}
+        onCancel={() => setIsOpenModal(false)}
+        okText="Download"
+        cancelText="Cancel"
+      >
+        <p>Do you want to download this image?</p>
+        {selectedImage && (
+          <img
+            src={selectedImage}
+            alt="Preview"
+            className="w-full mt-4 rounded"
+          />
+        )}
+      </Modal>
+    </>
+  );
+};
 
-    // const imageArray = [
-    //        {
-    //         id:1,
-    //         image:one
-    //        },
-    //        {
-    //         id:2,
-    //         image:two
-    //        },
-    //        {
-    //         id:3,
-    //         image:three
-    //        },
-    //        {
-    //         id:4,
-    //         image:four
-    //        },
-    //        {
-    //         id:5,
-    //         image:five
-    //        }
-    // ]
-    //    if(imageArray){
-    //      setIsLoading(false)
-    //    }
-
-       const downloadImage = (url) => {
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = url.substring(url.lastIndexOf("/") + 1);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-    // console.log(imageArray)
-
-    return (
-        <>
-            {/* {isLoading ? (
-                <Preloader />
-            ) : (
-                // imageData && imageData.datas && imageData.datas.map((item, index) => (
-                    imageArray.map((item)=>(
-                        
-                    ))
-                 
-                // ))
-            )} */}
-
-
-                    <div className="image-contain">
-                        <img src={one} alt="Logo" />
-                        <div className="my-image">
-                            <LikeOutlined />
-                             <DislikeOutlined />
-                            <CloudDownloadOutlined onClick={() => downloadImage(one)} style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
-                    <div className="image-contain">
-                        <img src={two} alt="Logo" />
-                        <div className="my-image">
-                            <LikeOutlined />
-                             <DislikeOutlined />
-                            <CloudDownloadOutlined onClick={() => downloadImage(two)} style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
-                    <div className="image-contain" >
-                        <img src={three} alt="Logo" />
-                        <div className="my-image">
-                            <LikeOutlined />
-                             <DislikeOutlined />
-                            <CloudDownloadOutlined onClick={() => downloadImage(three)} style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
-                    <div className="image-contain" >
-                        <img src={four} alt="Logo" />
-                        <div className="my-image">
-                            <LikeOutlined />
-                             <DislikeOutlined />
-                            <CloudDownloadOutlined onClick={() => downloadImage(four)} style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
-                    <div className="image-contain">
-                        <img src={five} alt="Logo" />
-                        <div className="my-image">
-                            <LikeOutlined />
-                             <DislikeOutlined />
-                            <CloudDownloadOutlined onClick={() => downloadImage(five)} style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
-                  
-
-            
-        </>
-    );
-}
+export default Images;
