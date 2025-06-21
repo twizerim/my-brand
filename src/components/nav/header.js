@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import "../../sass/style.css"
-import StarLogo from "../home-container/logo";
+import StarLogo from "../../logo";
 import { MenuOutlined } from '@ant-design/icons';
 import { CloseOutlined } from '@ant-design/icons';
 

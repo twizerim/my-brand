@@ -1,14 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-import Welcomescreen from './screen/welcome';
+import Welcomescreen from './screen/auth/welcome';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-import Brandscreen from './screen/brandscreen';
-import Blogdashboard from "./screen/blogscreen"
-import Userdadhbord from './screen/useritaface';
-import Adminpanal from "./screen/adminpanal"
-import Preloader from './components/home-container/plerloard';
+import Brandscreen from './screen/client/brandscreen';
+import Blogdashboard from "./screen/client/blogscreen"
+import Adminpanal from "./screen/admin/adminpanal"
+import Preloader from './plerloard';
 import { useEffect, useState } from 'react';
-import ContactScreen from './screen/contactScreen';
+import ContactScreen from './screen/client/contactScreen';
 
 function App() {
   const [isLoding,setIsLoding]=useState(false)
@@ -28,7 +27,6 @@ function App() {
                  <Route path='/' exact Component={Brandscreen}></Route>
                  <Route path='/login' Component={Welcomescreen}></Route>
                  <Route path='/blogscreen' Component={Blogdashboard}></Route>
-                 <Route path='/userdash' Component={Userdadhbord}></Route>
                  <Route path='/admin' Component={Adminpanal}></Route>
                  <Route path='contact' Component={ContactScreen}></Route>
               </Routes>

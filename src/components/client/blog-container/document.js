@@ -1,4 +1,4 @@
-import result from "../../assets/Documa/gedeon.pdf"
+import result from "../../../assets/Documa/gedeon.pdf"
 import { LikeOutlined,DislikeOutlined,CloudDownloadOutlined } from '@ant-design/icons';
 
 export default function DocumentFile(){

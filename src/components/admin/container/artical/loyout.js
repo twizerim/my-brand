@@ -1,7 +1,7 @@
 import React,{useState} from "react"
-import Postimage from "./postimage"
-import Postivideo from "./postvideo"
-import Posticertif from "./postcertif"
+import DocumentPage from "./page/document"
+import ImagePage from "./page/image"
+import NewsPage from "./page/news"
 
 export default function Loyout(){
     const [postimage,setpostimage]=useState(true)
@@ -26,7 +26,7 @@ export default function Loyout(){
     return(
         <>
         
-        <div className="bg-blue-900">
+        <div style={{backgroundColor:"#1e3a8a",padding:"20px"}}>
             <ul className="flex justify-start items-center gap-10 py-10 px-5">
             <li onClick={Handleimage} className="text-5xl" style={{listStyle:"none"}}>Images</li>
             <li onClick={Handlevideo} className="text-5xl" style={{listStyle:"none"}}>Videos</li>
@@ -34,15 +34,15 @@ export default function Loyout(){
             </ul>
            
         </div>
-        <div className="bg-white">
+        <div style={{backgroundColor:"#ccc",height:"100vh",padding:10}}>
         {postimage && (
-            <Postimage/>
+            <ImagePage/>
         )}
         {postvideo &&(
-            <Postivideo/>
+            <NewsPage/>
         )}
         {postidocuma && (
-            <Posticertif/>
+            <DocumentPage/>
         )}
         </div>
         

@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../../sass/plerloard.css"
+import "./plerloard.css"
 import StarLogo from "./logo";
 
 const Preloader = () => {

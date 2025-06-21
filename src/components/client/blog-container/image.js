@@ -1,17 +1,17 @@
 // import React, { useState} from "react";
-import "../../sass/subcomponent/blogimage.css";
+
 // import Preloader from "./plerloard";
 // import axios from "axios";
 import { LikeOutlined,DislikeOutlined,CloudDownloadOutlined } from '@ant-design/icons';
-import one from "../../assets/guy.jpeg"
-import two from "../../assets/jant.jpeg"
-import three from "../../assets/image.png"
-import four from "../../assets/history.jpeg"
-import five from "../../assets/home.jpeg"
+import one from "../../../assets/guy.jpeg"
+import two from "../../../assets/jant.jpeg"
+import three from "../../../assets/image.png"
+import four from "../../../assets/history.jpeg"
+import five from "../../../assets/home.jpeg"
 
 
 
-export default function BlogImages() {
+export default function Images() {
     // const [imageData, setImageData] = useState([]);
     // const [isLoading, setIsLoading] = useState(true);
 

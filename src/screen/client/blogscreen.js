@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
-import "../sass/blogscren.css"
-import "../sass/style.css"
-import BlogImages from '../components/home-container/blogimage';
+import "../../sass/blogscren.css"
+import "../../sass/style.css"
 import { FacebookOutlined,LinkedinOutlined,GithubOutlined} from '@ant-design/icons';
-import SearchForm from '../components/forms/search-form';
+import SearchForm from '../../components/forms/search-form';
 
 import { Pagination } from 'antd';
-import DocumentFile from '../components/blog-container/document';
+import Images from '../../components/client/blog-container/image';
+import DocumentFile from '../../components/client/blog-container/document';
 
 
 const Blogdashboard = () => {
@@ -69,7 +69,7 @@ const Blogdashboard = () => {
          )}
           {gallery && (
             <div className='gallery'>
-               <BlogImages/>
+               <Images/>
             </div>
           )}
        </div>

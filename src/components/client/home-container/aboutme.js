@@ -1,7 +1,7 @@
 
 import React from "react";
-import "../../sass/style.css"
-import jant from "../../assets/jant.jpeg"
+import "../../../sass/style.css"
+import jant from "../../../assets/jant.jpeg"
 
 
 export default function Aboutme(){
@@ -15,7 +15,7 @@ export default function Aboutme(){
         </p>
         <p>Here are some current tochnologies I've worked with</p> 
         <div class="button-container text-left">
-        <a href="" class="btn btn-none" download="">Download my cv</a>
+        <a href="/login" class="btn btn-none">Download my cv</a>
       </div>
       </div>
       <div class= "about-image">

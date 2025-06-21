@@ -1,9 +1,9 @@
 
-import '../App.css';
-import Login from '../components/home-container/login';
+import '../../App.css';
+import Login from '../../components/auth/login';
 import React,{useState} from 'react';
-import Signup from '../components/home-container/signup';
-import Navigation from '../components/nav/header';
+import Signup from '../../components/auth/signup';
+import Navigation from '../../components/nav/header';
 
 
 function Welcomescreen() {

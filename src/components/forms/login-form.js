@@ -39,6 +39,7 @@ export default function Loginform(){
 
     const onFinish = values => {
       HandleLogin()
+        window.location.href="/admin"
         console.log('Success:', values);
       };
       // const onFinishFailed = errorInfo => {

@@ -15,6 +15,10 @@ export default function Signup(props){
           <img src={image} alt="login"/>
         </div>
       <div className="flex flex-col justify-between">
+         <div className="pb-10 mb-6">
+         <h1 className="text-left pb-10 mb-6">Fill this form to be registed</h1>
+         </div>
+        
           <Signupform/>
          
           </div>

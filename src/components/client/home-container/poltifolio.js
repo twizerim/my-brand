@@ -1,9 +1,9 @@
 
 import React from "react";
-import "../../sass/style.css"
+import "../../../sass/style.css"
 // import picture from "../assets/ff.jpeg"
-import home from "../../assets/home.png"
-import doctor from "../../assets/doctor.png"
+import home from "../../../assets/home.png"
+import doctor from "../../../assets/doctor.png"
 import { GithubOutlined, LinkOutlined } from '@ant-design/icons';
 
 

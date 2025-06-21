@@ -1,6 +1,6 @@
-import ConctactForm from "../components/forms/contact-form";
-import Footer from "../components/home-container/footer";
-import Navigation from "../components/nav/header";
+import ConctactForm from "../../components/forms/contact-form";
+import Footer from "../../components/nav/footer";
+import Navigation from "../../components/nav/header";
 
 export default function ContactScreen(){
     return (

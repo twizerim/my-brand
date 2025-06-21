@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function Postivideo(){
+export default function NewsPage(){
     return (
         <>
         <h1>post video</h1>

@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
-import "../sass/userdash.css"
+import "../../sass/userdash.css"
 import { MenuOutlined,CloseOutlined,WindowsOutlined,HomeOutlined,ContactsOutlined,UsergroupAddOutlined,OpenAIOutlined } from '@ant-design/icons';
-import Blogscontainer from "../container/blogs";
-import Useroparation from "../container/useroperation";
+import Blogscontainer from "../../components/admin/container/blogs";
+import Useroparation from "../../components/admin/container/useroperation";
 
 
 export default function Adminpanal(){

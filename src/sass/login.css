@@ -6,8 +6,7 @@
 }
 
 button{
-    background-image: linear-gradient(to right ,aqua,gray,white);
-    width: 100%;
+    width: unset;
     border-radius: 2rem;
     padding: 1rem;
     text-align: center;

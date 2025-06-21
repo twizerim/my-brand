@@ -73,7 +73,7 @@ nav {
   
   letter-spacing: 0.3rem;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, rgb(30,64,135), aqua);
+  background-image: linear-gradient(to right, rgb(30,64,135),rgb(240, 20, 122));
   color: transparent;
   -webkit-background-clip: text;
   transition: all 0.3s;
@@ -185,12 +185,12 @@ nav {
 }
 .btn:hover,
 .btn:active {
-  background-color: rgb(83, 80, 87);
+  background-color: rgb(240, 20, 122);
   color: rgb(30,64,135);
   border-bottom: none;
 }
 .home-container {
-  background-image: url("https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?");
+  background-image: url("../assets//gedooo.jpg");
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -337,7 +337,7 @@ nav {
   color: rgb(30,64,135);
 }
 h5{
-  color: aqua;
+  color: rgb(240, 20, 122);
 }
 .welcome-text p {
   font-size: 1.6rem;
@@ -376,8 +376,8 @@ h5{
 
 .btn-none:hover,
 .btn-none:active {
-  background-color: rgb(83, 80, 87);
-  color: black;
+  background-color: rgb(240, 20, 122);
+  color: white;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -410,7 +410,7 @@ h5{
   display: inline-block;
   color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to right ,rgb(30,64,135),gray,white);
+  background-image: linear-gradient(to right ,rgb(30,64,135),gray,rgb(240, 20, 122));
   position: relative;
 }
 @media(max-width:493px){
@@ -438,7 +438,7 @@ h5{
   left: 0%;
   height: 5px;
   width: 25%;
-  background-image: linear-gradient(to right,rgb(30,64,135),gray,white);
+  background-image: linear-gradient(to right,rgb(30,64,135),rgb(240, 20, 122),white);
   position: absolute;
   font-size: 1.2rem;
 }
@@ -448,7 +448,7 @@ h5{
   left: 0%;
   height: 5px;
   width: 80%;
-  background-image: linear-gradient(to right,gray,white,rgb(30,64,135));
+  background-image: linear-gradient(to right,rgb(240, 20, 122),white,rgb(30,64,135));
   position: absolute;
   font-size: 1.2rem;
 }
@@ -461,7 +461,7 @@ h5{
   position: absolute;
   width: 40%;
   height: 40%;
-  background-color: rgb(30,64,135);
+  background-image: linear-gradient(to right bottom ,rgb(30,64,135),rgb(240, 20, 122));
 
 }
 @media(max-width:754px){
@@ -634,63 +634,10 @@ h5{
   display: inline-block;
   margin-top: 2rem;
 }
-.input-field{
-  width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid black;
-  outline: none;
-  background: transparent;
-}
-::placeholder{
-  position: absolute;
-  top: 40%;
-  left: 5px;
-  transform: translateY(-505);
-  font-size: 1.2rem;
-  color: black;
-  font-weight: 500;
-  pointer-events: none;
-  transition: .5s;
-}
- input:focus~::placeholder,
- input:valid~::placeholder{
-  top: -5px;
-}
-.submit-btn{
-  padding: 5%;
-  width: 20px 30px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  background: linear-gradient(to right,black ,white);
-  border: 0;
-  outline: none;
-  border-radius: 30px;
-  font-size: 1.4rem;
-}
-.checkbox{
-  margin: 30px 10px 30px 0;
-}
 .icons{
   position: absolute;
   right: 30px;
   
-}
-h4{
-  color: gray;
-  font-size: 12px;
-  bottom: 68px;
-  position: absolute;
-}
-#f-login{
-  left:50px
-}
-#f-Register{
-  left:450px
 }
 .skills-container{
   background-color: #fff;
@@ -777,7 +724,7 @@ h4{
     justify-content: center;
     background-image: linear-gradient(
       to left bottom,
-    rgba(0, 0, 0, 0.726),rgba(128, 128, 128, 0.719)
+    rgba(22, 22, 22, 0.726),rgba(128, 128, 128, 0.719)
     );
   }
   .skills-content--content h3 {
@@ -841,7 +788,7 @@ h4{
   }
 }
 .contact-left {
-  background-image: linear-gradient(to right top, black,white);
+  background-image: linear-gradient(to right top, rgba(15, 15, 15, 0.733),white);
   padding: 3rem;
   width: 40%;
 }
@@ -911,7 +858,7 @@ h4{
   display: block;
 }
 .contact-right {
-  background-image: linear-gradient(to left bottom, white,black);
+  background-image: linear-gradient(to left bottom, white,rgb(17, 17, 17));
   padding: 3rem;
   width: 45%;
 }
@@ -1112,7 +1059,7 @@ textarea {
   -webkit-writing-mode: vertical-rl;
 
   font-size: 1.6rem;
-  color: aqua;
+  color: rgb(240, 20, 122);
   font-weight: bold;
 }
 .menu-icon {
