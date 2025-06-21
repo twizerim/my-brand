@@ -34,7 +34,8 @@ const StarLogo = ({ className }) => {
       {/* Bottom Right Section */}
       <path
         d="M51 73.5 L81.5 96 L69 59.5 L102 36.5 H63.5 L51 0 Z"
-        fill="blue"
+        fill="#1E4087
+"
       />
     </svg>
   );
