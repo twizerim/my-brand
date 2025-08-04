@@ -10,26 +10,20 @@
   }
 }
 .formdisign{
-  background-color: white;
   width: 50%;
   border-radius: 1.4rem;
-  padding: 20px;
 }
 @media(max-width:1096px){
-  .formdisign{
-    width: 40%;
-  }
-}
-@media(max-width:828px){
   .formdisign{
     width: 50%;
   }
 }
-@media(max-width:657px){
+@media(max-width:840px){
   .formdisign{
-    width: 60%;
+    width: 70%;
   }
 }
+
 @media(max-width:549px){
   .formdisign{
     width: 80%;

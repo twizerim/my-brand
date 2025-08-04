@@ -7,7 +7,7 @@ export default function ContactScreen(){
         <>
           <Navigation/>
           <div className="mt-32  flex justify-start items-center  py-28 px-40 bg-blue-900">
-             <h1 className="text-7xl text-white">Contact Me</h1>
+             <h1 className="text-7xl text-blue-800">Contact Me</h1>
           </div>
           <div className="flex justify-between items-center gap-20 px-40 py-20 h-[58.6vh]">
              <div className="w-1/3">

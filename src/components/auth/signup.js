@@ -1,33 +1,28 @@
 
 import React from "react";
 import "../../sass/login.css"
-import image from "../../assets/regist.jpeg"
 import Signupform from "../forms/signup-form";
+import { Button } from "antd";
+import { LoginOutlined } from "@ant-design/icons";
 
 
 export default function Signup(props){
     
     return (
         <>
-         <div>
-         <div className="flex   ">
-        <div>
-          <img src={image} alt="login"/>
+         <div className="mt-40">
+            <div className="bg-white rounded-xl px-4 sm:px-10 py-10">
+                <h1 className="text-left font-bold pb-4 md:pb-10 text-xl md:text-3xl">Register Your Account</h1>
+              <Signupform/>
+            </div>
+           <div className="flex flex-col md:flex-row justify-between items-center md:items-center pl-4 pr-4 md:pl-20 md:pr-10 py-6 bg-white mt-10 rounded-xl">
+              <div className="flex flex-col">
+                 <p className="text-2xl font-bold">Already have an account?</p>
+                  <p>Go to Login</p>
+              </div>
+               <Button className="mt-5" onClick={props.pass}>Login <LoginOutlined style={{color:"#F0147A",marginLeft:8}}/></Button>
+          </div>
         </div>
-      <div className="flex flex-col justify-between">
-         <div className="pb-10 mb-6">
-         <h1 className="text-left pb-10 mb-6">Fill this form to be registed</h1>
-         </div>
-        
-          <Signupform/>
-         
-          </div>
-        
-          </div>
-          <div className="flex justify-end pt-5">
-           <p>Al ready have an Account<span onClick={props.pass} className="text-blue-800"> SIGN IN</span></p>
-         </div>
-         </div>
         </>
     )
 }

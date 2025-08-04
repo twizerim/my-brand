@@ -1,100 +1,89 @@
 import { Button, Checkbox, Form, Input } from 'antd';
-import axios from 'axios';
-import React,{useState} from 'react';
+import { useSignUp } from '../hook/usesignup';
+import { LoginOutlined, UserOutlined, MailOutlined, PushpinOutlined } from '@ant-design/icons';
 
-export default function Signupform(){
+export default function Signupform() {
+  const { HandleInputchange, HandleSubmition, formData } = useSignUp();
 
-    const [formData , setFormData] = useState({
-        firstname:"",lastname:"",email:"",password:"",confrimpassword:""
-    })
+  return (
+    <Form
+      onFinish={HandleSubmition}
+      layout="vertical"
+      className="w-full"
+    >
+      
+      <div className="flex flex-col md:flex-row gap-4 md:gap-10 mb-4">
+        <Form.Item
+          label="First Name"
+          name="firstName"
+          rules={[{ required: true, message: 'Please input your first name!' }]}
+          value={formData.firstName}
+          onChange={HandleInputchange}
+          className="w-full md:w-1/2"
+        >
+          <Input prefix={<UserOutlined style={{ color: "#F0147A" }} />} />
+        </Form.Item>
 
-    const HandleInputSignup = (e) =>{
-        setFormData({
-           ...formData,[e.target.name]:e.target.value
-        })
-    }
+        <Form.Item
+          label="Last Name"
+          name="lastName"
+          rules={[{ required: true, message: 'Please input your last name!' }]}
+          value={formData.lastName}
+          onChange={HandleInputchange}
+          className="w-full md:w-1/2"
+        >
+          <Input prefix={<UserOutlined style={{ color: "#F0147A" }} />} />
+        </Form.Item>
+      </div>
 
-    const HandleSignup = async (e) =>{
-        e.preventDefault();
+    
+      <Form.Item
+        label="Username"
+        name="username"
+        rules={[{ required: true, message: 'Please input your username!' }]}
+        value={formData.username}
+        onChange={HandleInputchange}
+      >
+        <Input prefix={<MailOutlined style={{ color: "#F0147A" }} />} />
+      </Form.Item>
 
-        const API="https://type-bn-poltifolio.onrender.com/Jant/user/create"
-          
-        try {
-            const response = await axios.post(API,formData,{
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            alert(response.data.message)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-   return (
-    <>
-      <Form onFinish={HandleSignup}>
-           <div className="flex items-center gap-2" >
-               <Form.Item
-                label="Fist Name"
-                name="fistname"
-                rules={[{ required: true, message: 'Please input your username!' }]}
-                value={formData.firstname}
-              >
-                <Input />
-              </Form.Item>
-          
-              <Form.Item
-                label="Last Name"
-                name="lastname"
-                rules={[{ required: true, message: 'Please input your username!' }]}
-                value={formData.lastname}
-                onMetaChange={HandleInputSignup}
-              >
-                <Input />
-              </Form.Item>
-               </div>
-          
-              <Form.Item
-                label="Username"
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
-                value={formData.email}
-                onMetaChange={HandleInputSignup}
-              >
-                <Input />
-              </Form.Item>
-          
-              <Form.Item
-                label="Password"
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
-                onMetaChange={HandleInputSignup}
-                value={formData.password}
-              >
-                <Input.Password />
-              </Form.Item>
-          
-              <Form.Item
-                label="Confrim Password"
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
-                onMetaChange={HandleInputSignup}
-                value={formData.confrimpassword}
-              >
-                <Input.Password />
-              </Form.Item>
-          
-              <Form.Item name="remember" valuePropName="checked" label={null}>
-                <Checkbox>Agree terms and condition</Checkbox>
-              </Form.Item>
-          
-              <Form.Item label={null}>
-                <Button type="primary" htmlType="submit">
-                  SIGN UP
-                </Button>
-              </Form.Item>
-              
-               </Form>
-    </>
-   )
+      <div className="flex flex-col md:flex-row gap-4 md:gap-10 mb-4">
+        <Form.Item
+          label="Password"
+          name="password"
+          rules={[{ required: true, message: 'Please input your password!' }]}
+          value={formData.password}
+          onChange={HandleInputchange}
+          className="w-full md:w-1/2"
+        >
+          <Input.Password prefix={<PushpinOutlined style={{ color: "#F0147A" }} />} />
+        </Form.Item>
+
+        <Form.Item
+          label="Confirm Password"
+          name="confirmPassword"
+          rules={[{ required: true, message: 'Please confirm your password!' }]}
+          value={formData.confirmPassword}
+          onChange={HandleInputchange}
+          className="w-full md:w-1/2"
+        >
+          <Input.Password prefix={<PushpinOutlined style={{ color: "#F0147A" }} />} />
+        </Form.Item>
+      </div>
+
+      <div className="flex flex-col md:flex-row justify-between items-center mt-4 md:mt-6">
+        <Form.Item name="remember" valuePropName="checked" className="mb-4 md:mb-0">
+          <Checkbox>
+            I agree to the <a href="/" className="text-blue-600 underline">terms and conditions</a>
+          </Checkbox>
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="primary" htmlType="submit" className="flex items-center">
+            SIGN UP <LoginOutlined style={{ marginLeft: 8 }} />
+          </Button>
+        </Form.Item>
+      </div>
+    </Form>
+  );
 }

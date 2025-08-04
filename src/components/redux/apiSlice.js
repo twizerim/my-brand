@@ -26,7 +26,15 @@ export const apiSlice = createApi({
         body: formData, 
       }),
     }),
+
+    signUp:builder.mutation({
+      query:(formData)=>({
+        url:"user/signUp",
+        method:"",
+        body:formData
+      })
+    })
   }),
 });
 
-export const { useGetUserQuery, useLoginMutation } = apiSlice;
+export const { useGetUserQuery, useLoginMutation,useSignUpMutation } = apiSlice;

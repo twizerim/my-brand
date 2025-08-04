@@ -1,6 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import axios from 'axios';
 import React,{useState} from 'react';
+import { ArrowRightOutlined } from '@ant-design/icons';
 
 export default function ConctactForm(){
 
@@ -29,7 +30,7 @@ export default function ConctactForm(){
  }
     return (
         <>
-          <Form  onFinish={Handlecontact}>
+          <Form  onFinish={Handlecontact} layout="vertical">
              <div className='flex justify-between items-center gap-3'>
                <div className='w-1/2'>
                <Form.Item
@@ -88,15 +89,18 @@ export default function ConctactForm(){
               </Form.Item>
               
           
-              <Form.Item name="remember" valuePropName="checked" label={null}>
+              <div className='flex justify-between items-center'>
+                <Form.Item name="remember" valuePropName="checked" label={null}>
                 <Checkbox>I agree that it is true message</Checkbox>
               </Form.Item>
           
               <Form.Item label={null}>
                 <Button type="primary" htmlType="submit" onSubmit={Handlecontact}>
                   SUBMIT
+                  <ArrowRightOutlined style={{marginLeft:8,color:'white'}}/>
                 </Button>
               </Form.Item>
+              </div>
               
                </Form>
         </>

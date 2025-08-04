@@ -3,7 +3,7 @@ import two from "../../../assets/jant.jpeg";
 import three from "../../../assets/image.png";
 import four from "../../../assets/history.jpeg";
 import five from "../../../assets/home.jpeg";
-import { Modal } from "antd";
+import { Modal} from "antd";
 import { useState } from "react";
 
 const Images = () => {
@@ -42,11 +42,11 @@ const Images = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-10 p-4">
         {imageArray.map((img) => (
           <div
             key={img.id}
-            className="overflow-hidden rounded-xl shadow-md cursor-pointer"
+            className="overflow-hidden rounded-xl shadow-md cursor-pointer w-full"
             onClick={() => handleImageClick(img.image)}
           >
             <img

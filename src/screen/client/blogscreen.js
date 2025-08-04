@@ -1,37 +1,34 @@
 import React,{useState} from 'react';
 import "../../sass/blogscren.css"
 import "../../sass/style.css"
-import { FacebookOutlined,LinkedinOutlined,GithubOutlined} from '@ant-design/icons';
+import { FacebookOutlined,LinkedinOutlined,GithubOutlined,ArrowLeftOutlined} from '@ant-design/icons';
 import SearchForm from '../../components/forms/search-form';
 
-import { Pagination } from 'antd';
+import { Pagination} from 'antd';
 import Images from '../../components/client/blog-container/image';
 import DocumentFile from '../../components/client/blog-container/document';
+
 
 
 const Blogdashboard = () => {
   const [article,setArticle]=useState(false)
   const [document,setDocument]=useState(false)
-  const [gallery,setGallery]=useState(false)
-  const [welcom,setWelcom]=useState(true)
-
+  const [gallery,setGallery]=useState(true)
+  
   const handledocument = () =>{
      setArticle(false)
      setDocument(true)
      setGallery(false)
-     setWelcom(false)
   }
   const handlearticle = () =>{
     setArticle(true)
      setDocument(false)
      setGallery(false)
-     setWelcom(false)
   }
   const handlegallery = () =>{
     setArticle(false)
      setDocument(false)
      setGallery(true)
-     setWelcom(false)
   }
   const Goback = () =>{
     window.location.href='/'
@@ -44,32 +41,50 @@ const Blogdashboard = () => {
          </div>
        </div>
        <div className='blognav'>
+         
           <div className='flex justify-center items-center gap-10'>
-          <li className={document===true? "blonave-li":""} onClick={Goback}>Home</li>
+          <li onClick={Goback}><ArrowLeftOutlined style={{color:"#F0147A"}}/></li>
           <li onClick={handlearticle} className={article===true? "blonave-li":""}>Articles</li>
          <li onClick={handledocument} className={document===true? "blonave-li":""}>Documents</li>
          <li onClick={handlegallery} className={gallery===true? "blonave-li":""}>Gallery</li>
           </div>
-          <div className=' pt-4'>
-             <SearchForm/>
+          {gallery && (
+            <div className=' flex justify-center items-center gap-5 pt-4'>
+             <SearchForm name="Search image"/>
+
           </div>
+          )}
+          {document && (
+            <div className=' flex justify-center items-center gap-5 pt-4'>
+             <SearchForm name="Search document"/>
+
+          </div>
+          )}
+          {article && (
+            <div className=' flex justify-center items-center gap-5 pt-4'>
+             <SearchForm name="Search article"/>
+
+          </div>
+          )}
+          
+          
        </div>
 
        <div className='space'>
-        {welcom && (
-           <div className='welcomnumber'>
-           <Pagination/>
-          </div>
-        )}
-          {article && ( <h1>articles</h1>)}
+        
+          {article && ( 
+          <h1>articles</h1>
+          )}
          {document && (
             <div className='gallery'>
                <DocumentFile/>
+               <Pagination/>
             </div>
          )}
           {gallery && (
             <div className='gallery'>
                <Images/>
+               <Pagination/>
             </div>
           )}
        </div>
