@@ -6,7 +6,7 @@ export default function LoginForm() {
   const { formData, HandleSubmit, HandleInputchange } = useLogin();
 
   return (
-    <Form onFinish={HandleSubmit} layout="vertical" className="w-full max-w-md mx-auto">
+    <Form onFinish={HandleSubmit} layout="vertical" className="w-full max-w-md-full mx-auto">
     
       <Form.Item
         label="Email"

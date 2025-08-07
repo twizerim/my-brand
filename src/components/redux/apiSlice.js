@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://my-brand-b.onrender.com/api/v1/",
+    baseUrl:"https://my-brand-b.onrender.com/api/v1/",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("token");
       if (token) {
@@ -30,11 +30,25 @@ export const apiSlice = createApi({
     signUp:builder.mutation({
       query:(formData)=>({
         url:"user/signUp",
-        method:"",
+        method:"POST",
         body:formData
       })
-    })
+    }),
+
+     getUsers:builder.query({
+    query :() => "user",
+    invalidatesTags: ['User']
+  }),
+
+  deleteUserById:builder.mutation({
+    query:(id)=>({
+      url:`user/${id}`,
+      method:"DELETE",
+    }),
+    invalidatesTags: ['User']
+  })
+
   }),
 });
 
-export const { useGetUserQuery, useLoginMutation,useSignUpMutation } = apiSlice;
+export const { useGetUserQuery, useLoginMutation,useSignUpMutation,useGetUsersQuery ,useDeleteUserByIdMutation} = apiSlice;
