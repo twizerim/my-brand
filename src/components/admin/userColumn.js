@@ -1,6 +1,6 @@
-import { DeleteOutlined } from "@ant-design/icons";
+import { DeleteOutlined } from "@ant-design/icons"
 
-export const Columns = [
+export const Columns = (handleOpenModal) => [
   {
     title: 'FirstName',
     dataIndex: 'firstName',
@@ -24,9 +24,11 @@ export const Columns = [
   {
     title: 'Actions',
     key: 'action',
-    dataIndex: 'action',
     render: (_, record) => (
-      <DeleteOutlined style={{ color: 'red', cursor: 'pointer' }}  />
+      <DeleteOutlined
+        style={{ color: 'red', cursor: 'pointer' }}
+        onClick={() => handleOpenModal(record._id)} 
+      />
     ),
   }
 ];
